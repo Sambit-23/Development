@@ -1,0 +1,5 @@
+package com.springsam.codewithsam;
+
+public class HelloWorldConfiguration {
+
+}

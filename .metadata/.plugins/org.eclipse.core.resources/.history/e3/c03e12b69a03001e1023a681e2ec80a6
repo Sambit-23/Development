@@ -1,0 +1,27 @@
+<%@page import="java.time.LocalTime"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+	<h1>This is Help Page</h1>
+	
+	<%
+	String name= (String)request.getAttribute("name");
+	Integer roll= (Integer) request.getAttribute("rollnumber");
+	LocalTime time =(LocalTime)request.getAttribute("time");
+	%>
+	
+	<h1>My name is <%=name %></h1>
+	<h1>My rollNumber is <%=roll %></h1>
+	<h1>The current time is <%=time.toString() %></h1>
+	
+
+</body>
+</html>
+

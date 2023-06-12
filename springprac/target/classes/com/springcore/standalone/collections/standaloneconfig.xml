@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Standalone list -->
+
+	<util:list list-class="java.util.LinkedList"
+		id="mybestfriends">
+
+		<value>amitav</value>
+		<value>bismit</value>
+		<value>charu</value>
+		<value>dhananjay</value>
+		<value>eliana</value>
+
+	</util:list>
+
+	<!-- Standalone map -->
+
+	<util:map map-class="java.util.HashMap" id="fee">
+		<entry key="Spring Frame" value="8000" />
+		<entry key="Django Frame" value="5000" />
+		<entry key="Hibernate Frame" value="2000" />
+		<entry key="Spring Boot" value="4000" />
+	</util:map>
+	
+	<!-- standalone properties -->
+	
+	<util:properties id="dbconfig">
+	<prop key="driver">com.chrome.driver </prop>
+	<prop key="username">sambit_23 </prop>
+	<prop key="password">sambit#1</prop>
+	<prop key="url">www.sks.com </prop>
+		
+	</util:properties>
+
+	<bean class="com.springcore.standalone.collections.Person"
+		name="person1">
+		<!-- <property name="friends"> <ref bean="mybestfriends" /> </property> -->
+		<property name="friends" ref="mybestfriends"></property>
+		<property name="feeStructure" ref="fee"></property>
+		<property name="props" ref="dbconfig" />
+	</bean>
+	
+	
+
+</beans>

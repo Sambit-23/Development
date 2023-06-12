@@ -1,0 +1,36 @@
+package springmvc.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController {
+		
+	@RequestMapping("/home")
+	public String home(Model model) {
+		System.out.println("this is home url");
+		model.addAttribute("name","dibya");
+		model.addAttribute("id", 64732);
+		
+		List<String> friends= new ArrayList();
+		friends.add("kamala");
+		friends.add("bimala");
+		friends.add("haria");
+		
+		model.addAttribute("fr",friends);
+		
+		
+		return "index";
+	}
+	
+	@RequestMapping("/about")
+	public String about() {
+		System.out.println("this is about url");
+		return "about";
+	}
+	
+}

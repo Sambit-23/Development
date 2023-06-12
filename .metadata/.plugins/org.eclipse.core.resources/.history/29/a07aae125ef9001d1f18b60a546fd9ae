@@ -1,0 +1,20 @@
+package com.springsam.codewithsam;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.springsam.codewithsam.game.GameRunner;
+import com.springsam.codewithsam.game.MarioGame;
+import com.springsam.codewithsam.game.PackmanGame;
+import com.springsam.codewithsam.game.SuperContraGame;
+
+public class App002HelloWorldSpring {
+	public static void main(String[] args) {
+
+		// 1: Lauch the Spring Context -
+
+		var context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
+		
+		// 2: Configure the thing that we want spring to manage - @Configuration
+
+	}
+}

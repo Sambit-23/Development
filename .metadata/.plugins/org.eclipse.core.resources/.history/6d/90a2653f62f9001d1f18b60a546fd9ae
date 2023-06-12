@@ -1,0 +1,41 @@
+package com.springsam.codewithsam;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class HelloWorldConfiguration {
+	
+	record Person (String name , int age) {}
+	record Address (String firstline, String city) {}
+
+	@Bean
+	public String name () {
+		return "sambit";
+	}
+	@Bean
+	public int age () {
+		return 48;
+	}
+	@Bean
+	public double balance () {
+		return 230.98;
+	}
+	@Bean
+	public boolean jobStatus () {
+		return true;
+	}
+	
+	@Bean
+	public Person person () {
+		var pereeen = new Person("zahir", 67);
+		return pereeen;
+	}
+	
+	@Bean
+	public Address address () {
+		return new Address("Puttapa IE", "Bangalore");
+		 
+	}
+	
+}

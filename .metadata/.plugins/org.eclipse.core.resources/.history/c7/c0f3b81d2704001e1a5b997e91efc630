@@ -1,0 +1,12 @@
+package springmvc.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class ContactController {
+
+	@RequestMapping("/contact")
+	public String showForm() {
+		System.out.println("I am in the Contact Page");
+		return "contact";
+	}
+}

@@ -1,0 +1,44 @@
+package com.springjdbc.dao;
+
+import java.util.Scanner;
+
+public class yy {
+
+	    static int minInsertionHelper(char s[], int start, int end)
+	    {
+
+	    // Base conditions to terminate the recursive call.
+	        if (start > end)
+	            return 0;
+	        if (start == end)
+	            return 0;
+
+	        // If starting and ending index have same value.
+	        if (s[start] == s[end])
+	        {
+	            return minInsertionHelper(s, start + 1, end - 1);
+	        }
+	        else
+	        {
+	            return Math.min(minInsertionHelper(s, start + 1, end), minInsertionHelper(s, start, end - 1)) + 1;
+	        }
+	    }
+
+
+
+	    // Function to calculate minimum number of insertions required for given string to be a palindrome.
+	    static int minInsertion(char s[]) {
+	        return minInsertionHelper(s, 0, s.length - 1);
+	    }
+	    public static void main(String[] args) {
+	        try (Scanner sc = new Scanner(System.in)) {
+	            char[] str= sc.next().toCharArray();    
+	            // Call function.
+	            int ans = minInsertion(str);
+	            System.out.println(ans);
+	            // Print the final answer.
+	        }
+	    }
+	}
+	
+

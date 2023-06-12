@@ -1,0 +1,16 @@
+package com.springsam.codewithsam;
+
+
+import com.springsam.codewithsam.game.GameRunner;
+import com.springsam.codewithsam.game.MarioGame;
+import com.springsam.codewithsam.game.PackmanGame;
+import com.springsam.codewithsam.game.SuperContraGame;
+
+public class App002Spring {
+	public static void main(String[] args) {
+      
+		//1: Lauch the Spring Context -
+		//2: Configure the thing that we want spring to manage - @Configuration
+
+	}
+}
